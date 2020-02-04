@@ -1,0 +1,27 @@
+body{
+    width: 960px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+h1{
+    color: blue;
+}
+
+div{
+    width: 780px;
+    word-wrap: break-all; /*折り返らない。。*/
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    border: 1px solid gray; /* 枠線 */
+    background-color: white; /* 背景色 */
+    box-shadow: 1px 1px 2px gray;
+    text-align: left;
+}
+
+.choice{
+    text-align: left;
+    margin-left: 80px;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ぐるなびAPItest</title>
+</head>
+
+<body>
+    <button id = 'btn'>データ取得</button>
+    <div id = 'output'></div>
+    
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <script>
+     
+     //リクエスト先URL
+     const url = 'https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=2683663ecb7f15a1270f5c47dd929ec6&pref=PREF40&name_kana=null&hit_per_page=50';
+     
+     //ボタン押下でデータ取得
+     $('#btn').on('click', function(){
+         $.getJSON(url)
+         .done(function(data,textStatus,jqXHR){
+             console.log(data);
+         }).fail(function(jqXHR,textStatus,errorThrown){
+             console.log(jqXHR.status + textStatus + errorThrown);
+         }).always(function(){
+             console.log('complete');
+         });
+     });
+     
+         
+       </script>
+ </body>
+</html>
+       
+     
+    
